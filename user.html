@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Polling App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>User Dashboard</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Filter Options -->
+        <section class="filters">
+            <label>
+                <input type="radio" name="filter" value="all" checked> All Polls
+            </label>
+            <label>
+                <input type="radio" name="filter" value="voted"> Already Voted
+            </label>
+            <label>
+                <input type="radio" name="filter" value="not-voted"> Not Voted
+            </label>
+        </section>
+
+        <!-- Polls List -->
+        <section class="polls-section">
+            <h2>Available Polls</h2>
+            <div id="pollsList"></div>
+        </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/user.js"></script>
+</body>
+</html>

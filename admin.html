@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Polling App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Create Poll Form -->
+        <section class="create-poll">
+            <h2>Create New Poll</h2>
+            <form id="createPollForm">
+                <input type="text" id="pollQuestion" placeholder="Poll Question" required>
+                <div id="optionsContainer">
+                    <input type="text" class="poll-option" placeholder="Option 1" required>
+                    <input type="text" class="poll-option" placeholder="Option 2" required>
+                </div>
+                <button type="button" id="addOption">Add Option</button>
+                <button type="submit">Create Poll</button>
+            </form>
+        </section>
+
+        <!-- Polls List -->
+        <section class="polls-section">
+            <h2>Your Polls</h2>
+            <div id="pollsList"></div>
+        </section>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
